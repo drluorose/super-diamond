@@ -15,6 +15,7 @@ import java.util.Arrays;
 import java.util.Date;
 import java.util.List;
 import java.util.Map;
+import java.util.Vector;
 import java.util.concurrent.ConcurrentHashMap;
 
 import org.apache.commons.lang.ArrayUtils;
@@ -71,7 +72,7 @@ public class DiamondServerHandler extends SimpleChannelInboundHandler<String> {
         	
         	List<ClientInfo> addrs = clients.get(key);
         	if(addrs == null) {
-        		addrs = new ArrayList<ClientInfo>();
+        		addrs = new Vector<ClientInfo>();
         	}
         	
         	String clientAddr = ctx.channel().remoteAddress().toString();

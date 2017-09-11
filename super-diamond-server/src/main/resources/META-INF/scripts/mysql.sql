@@ -48,21 +48,27 @@ create table `conf_project_user_role` (
 create table `conf_project_config` (
   `config_id` int(11) not null,
   `config_key` varchar(64) not null,
-  `config_value` varchar(256) not null,
+  `config_value` varchar(5000) not null,
   `config_desc` varchar(256) default null,
   `project_id` int(11) not null,
   `module_id` int(11) not null,
   `delete_flag` int(1) default '0',
   `opt_user` varchar(32) default null,
   `opt_time` datetime default null,
-  `production_value` varchar(256) not null,
+  `production_value` varchar(5000) not null,
   `production_user` varchar(32) default null,
   `production_time` datetime default null,
-  `test_value` varchar(256) not null,
+  `test_value` varchar(5000) not null,
   `test_user` varchar(32) default null,
   `test_time` datetime default null,
-  `build_value` varchar(256) not null,
+  `build_value` varchar(5000) not null,
   `build_user` varchar(32) default null,
   `build_time` datetime default null,
   primary key (`config_id`)
 ) engine=innodb default charset=utf8;
+
+ALTER TABLE  conf_project_config modify config_value varchar(5000) not null;
+ALTER TABLE  conf_project_config modify production_value varchar(5000) not null;
+ALTER TABLE  conf_project_config modify test_value varchar(5000) not null;
+ALTER TABLE  conf_project_config modify build_value varchar(5000) not null;
+

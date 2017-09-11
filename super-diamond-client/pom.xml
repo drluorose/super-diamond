@@ -33,6 +33,11 @@
             <version>${junit.version}</version>
         </dependency>
 
+        <dependency>
+            <groupId></groupId>
+            <artifactId></artifactId>
+        </dependency>
+
         <!-- slf4j -->
         <dependency>
             <groupId>ch.qos.logback</groupId>

@@ -33,6 +33,7 @@
 
         <junit.version>4.11</junit.version>
         <jetty.version>9.2.2.v20140723</jetty.version>
+
     </properties>
 
     <dependencyManagement>
@@ -137,6 +138,13 @@
                 <groupId>commons-configuration</groupId>
                 <artifactId>commons-configuration</artifactId>
                 <version>${commons-configuration.version}</version>
+            </dependency>
+
+
+            <dependency>
+                    <groupId>com.lmax</groupId>
+                    <artifactId>disruptor</artifactId>
+                    <version>3.3.6</version>
             </dependency>
 
             <dependency>
